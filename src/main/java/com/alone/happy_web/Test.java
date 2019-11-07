@@ -1,27 +1,29 @@
 package com.alone.happy_web;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.sql.DataSource;
+
 
 @Controller
 @RequestMapping("/test")
 public class Test {
 
-    @Autowired
-    private DataSource dataSource;
+    private static final Logger logger = LoggerFactory.getLogger(Test.class);
+    //@Autowired
+    //private DataSource dataSource;
 
     /**
      * 测试类，验证项目是否启动
      * @return
      */
-    @RequestMapping("hello")
+    @RequestMapping("hello.do")
     @ResponseBody
     public String getSpringId(){
+        logger.info("123");
         return "123";
     }
 

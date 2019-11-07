@@ -1,0 +1,28 @@
+
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cskaoyanmall
+    username: root
+    password: 123456
+
+server:
+  port: 80
+  server:
+    #在yaml文件中不能直接写html或jsp
+    path: "*.do"
+
+#日志级别
+logging:
+  level:
+    #com.alone 包下级别都为debug
+  com.alone: debug
+  # spring 包下的级别为debug
+  #org.springframework: debug
+
+
