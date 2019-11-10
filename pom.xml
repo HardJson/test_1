@@ -14,6 +14,12 @@
         <version>2.0.4.RELEASE</version>
     </parent>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <!--spring-web 启动器，不用写版本-->
@@ -77,6 +83,13 @@
             <version>5.2.0.RELEASE</version>
             <scope>test</scope>
         </dependency>-->
+
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.1</version>
+        </dependency>
     </dependencies>
 
 </project>
