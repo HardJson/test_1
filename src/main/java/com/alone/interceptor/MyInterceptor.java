@@ -18,17 +18,23 @@ public class MyInterceptor  implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        logger.info("preHandle is running");
+        if (logger.isInfoEnabled()){
+            logger.info("preHandle is running");
+        }
         return true;
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        logger.info("postHandle is running");
+        if (logger.isInfoEnabled()){
+            logger.info("postHandle is running");
+        }
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        logger.info("afterCompletion is running");
+        if (logger.isInfoEnabled()){
+            logger.info("afterCompletion is running");
+        }
     }
 }

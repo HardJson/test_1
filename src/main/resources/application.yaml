@@ -12,17 +12,26 @@ spring:
     password: 123456
 
 server:
-  port: 80
-  server:
-    #在yaml文件中不能直接写html或jsp
-    path: "*.do"
+  port: 8080
+  #server:
+  #  #在yaml文件中不能直接写html或jsp
+  #  path: "*.do"
 
 #日志级别
 logging:
   level:
-    #com.alone 包下级别都为debug
-  com.alone: debug
-  # spring 包下的级别为debug
-  #org.springframework: debug
+#    #com.alone 包下级别都为debug
+    com.alone: debug
+    #spring 包下的级别为debug
+    #org.springframework: info
 
+#mybatis的xml文件配置,mapper类的工厂
+mybatis:
+  #configuration:
+    #默认false，这里写为true 通用mapper会自动引入
+    # map-underscore-to-camel-case: true
+  #别名扫描包
+  type-aliases-package: com.alone.pojo
+  #mapper.xml的地址 多表查询使用xml文件，单表查询使用通用mapper
+  # mapper-locations: mapper/*.xml
 
