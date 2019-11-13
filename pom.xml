@@ -7,6 +7,12 @@
     <groupId>springboot_happy_best</groupId>
     <artifactId>happy_best</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>user_service</module>
+        <module>consumer</module>
+    </modules>
+    <!--聚合工程-->
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -18,9 +24,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>${spring-cloud.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+
         <dependency>
             <!--spring-web 启动器，不用写版本-->
             <groupId>org.springframework.boot</groupId>

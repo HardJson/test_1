@@ -12,7 +12,7 @@ spring:
     password: 123456
 
 server:
-  port: 8080
+  port: 80
   #server:
   #  #在yaml文件中不能直接写html或jsp
   #  path: "*.do"
